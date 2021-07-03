@@ -15,11 +15,11 @@ import cv2
 # load image file
 image = cv2.imread('image.jpeg', cv2.IMREAD_UNCHANGED)
 
-# convert image to greyscale
-image_greyscale = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+# convert image to grayscale
+image_grayscale = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 # reduce image noice
-image_blur = cv2.medianBlur(image_greyscale, 9)
+image_blur = cv2.medianBlur(image_grayscale, 9)
 
 # extract edges
 image_edges = cv2.adaptiveThreshold(
@@ -31,8 +31,8 @@ image_edges = cv2.adaptiveThreshold(
     C=2
 )
 
-# convert image to greyscale cartoon style
-image_cartoon = cv2.bitwise_and(image_greyscale, image_edges)
+# convert image to grayscale cartoon style
+image_cartoon = cv2.bitwise_and(image_grayscale, image_edges)
 
 # write output images
 cv2.imwrite('image_edges.png', image_edges)         # bare edges
