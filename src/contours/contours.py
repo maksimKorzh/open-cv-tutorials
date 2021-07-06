@@ -16,7 +16,7 @@ import numpy as np
 # open source image file
 image = cv2.imread('face.jpg', cv2.IMREAD_UNCHANGED)
 
-# convert image to frayscale
+# convert image to grayscale
 image_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 # onvert image to blck and white
