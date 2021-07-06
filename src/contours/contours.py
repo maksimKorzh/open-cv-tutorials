@@ -65,6 +65,12 @@ cv2.imshow('Background mask', mask)
 cv2.imshow('New background', new_background)
 cv2.imshow('Output', cv2.bitwise_and(image, new_background))
 
+# write images
+cv2.imwrite('contours.png', canvas)
+cv2.imwrite('mask.png', mask)
+cv2.imwrite('background.png', new_background)
+cv2.imwrite('output.png', cv2.bitwise_and(image, new_background))
+
 # escape condition
 cv2.waitKey(0)
 
