@@ -82,10 +82,6 @@ while True:
                     
                     # right click mouse
                     pg.click(button='right')
-
-    # smooth edges
-    frame_edges = cv2.dilate(frame_edges, None)
-    frame_edges = cv2.erode(frame_edges, None)
     
     # if webcam is available
     if stream_ok:
